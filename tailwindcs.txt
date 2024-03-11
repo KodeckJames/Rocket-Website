@@ -1,0 +1,43 @@
+*********************TAILWINDCSS DOCUMENTATION****************
+
+To start off, in the terminal type 'npm init -y' which installs a package.json file.
+Then type'npm install tailwindcss'
+The tailwindcss package is installed in the node_modules folder
+There is a source file and public file then in-between is the tailwind processor itself
+
+Create other two folders ie. src & public files.
+
+In the src folder create a style.css file
+
+In the syles.css/css file add the tailwind directives ie:             @tailwind base;
+                @tailwind components;
+                @tailwind utilities;
+
+Then go to the package.json file. In the scripts property, replace the sufixing text with "build-css": "tailwindcss build src/styles.css -o public/styles.css --watch" then run it in the terminal by typing npm run build-css
+
+you can use this link to link up your tailwindcss directly:
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+To create the tailwind.config.js file, type npx tailwindcss init --full in the terminal
+
+You can also define your own classes in tailwindcss by just adding your preferred property and it's value, then go to the terminal and type: npm run build-css (the word build-css is not ststic but the name you gave in in the package.json file in the scripts section)
+
+The above method of modifying the properties is not recommended, you sould instead create an empty tailwind.config.js file by typing npx tailwindcss init in the terminal then add the new properties in the extend property
+
+Use the rounded property to round the corners of eg. photos
+
+Use the overflow-hidden property to hide anything that overflows a container eg. an image that overflows the div container
+
+use the w-full property to ensure the object in place takes up the full width of it's container
+
+You can use the @apply directive as a holder of many classes in the source css file in a general class eg:
+
+Tracking is the spacing between letters
+
+inline-block class makes objects stay side by side just like flex while the default block class makes objects stack on each other
+
+The hidden class hides certain features eg. md:hidden this will hide the described class from middle screen sizes and up, making it only visible to small sized screens
+
+In transitions, you first start with the word transition then:ease-linear/ ease-in/ ease-out etc then duration ie. in ms
+
+The min-h-screen grid place-content-center class is placed in the previous container so as to apply in the current container
